@@ -27,6 +27,8 @@ async function run(userPrompt) {
     generatedText = await result.response.text();
     generatedText = generatedText.replace(/\*/g, '');
     generatedText = generatedText.replace(/\#/g, '');
+    generatedText = generatedText.replace(/\`/g, '');
+    generatedText = generatedText.replace(/\"/g, '');
     
   } catch (error) {
     console.error('Error generating content:', error);
